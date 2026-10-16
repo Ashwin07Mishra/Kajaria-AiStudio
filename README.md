@@ -18,7 +18,7 @@ The app has four modes, all sharing one tile catalogue and one lead-capture flow
 
 Across modes:
 
-- **Tile catalogue** with filters by group (Marble, Wood, Stone & Studio, Heritage, Bath), finish, size and price, plus a shortlist.
+- **Tile catalogue of 40+ SKUs** with filters by group (Marble, Wood, Stone & Studio, Heritage, Bath), finish, size and price, plus a shortlist.
 - **Custom tile upload.** Any image becomes a tile, cropped to a square texture and added to the shelf.
 - **Instant estimate** in rupees from area and tile price.
 - **Lead capture + CRM drawer.** Save the customer, their phone, buying intent, approximate area, the shortlisted tiles and a snapshot of the render.
