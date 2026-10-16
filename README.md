@@ -2,7 +2,6 @@
 
 An in-store tile visualization tool. A customer uploads one photo of their room and sees Kajaria tiles rendered onto their own floor, with the room's real lighting and shadows preserved. Built as a full-stack prototype (Flask + React) with AI room analysis, photo-realistic rendering, a 3D room planner and built-in lead capture.
 
-> **Status:** working prototype / demo. See [Limitations](#limitations) for what is intentionally not production-ready.
 
 ---
 
@@ -160,23 +159,4 @@ Never commit keys. Keep them in the environment or in an ignored `.env`.
 
 ---
 
-## Limitations
 
-This is a demo build. Before putting it in a store, address:
-
-- **No authentication.** Anyone who can reach the server can call the AI proxies and spend credits. Add auth and rate limits.
-- **Leads are held in memory.** Closing the tab loses them. A database and a real CRM integration are needed.
-- **Open CORS and Flask debug mode** are enabled in `app.py`. Turn debug off and restrict origins in production.
-- **A fal.ai key can be pasted into the browser** (kept in `localStorage`). That is convenient for demos but should be removed in favour of the backend proxy only.
-- **One floor-detection path calls the Anthropic API directly from the browser** and will fail without a proxy. Route it through `/api/claude` like room analysis. Auto Visualize already falls back to an offline heuristic when vision is unreachable.
-- **Catalogue is a 12-SKU demo.** Tile textures are generated procedurally rather than loaded from real product imagery.
-- **Projection and the 3D Planner are previews**, not hardware-integrated or measurement-accurate.
-- **No tests yet.**
-
-## Roadmap ideas
-
-- Persist leads and push them to a CRM
-- Load the real catalogue (images, SKUs, pricing) from an API
-- Server-side floor segmentation instead of prompt-based detection
-- Scan-to-phone handoff and WhatsApp sharing of renders
-- Auth, rate limiting and usage tracking for AI calls
